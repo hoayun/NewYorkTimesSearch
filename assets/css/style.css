@@ -1,10 +1,14 @@
-display-4{
-    background-color: blue;
+.display-4{
     text-align: center;
-    font-family: "nyt-franklin",Helvetica ,Arial,sans-serif
+    font-family: 'Playfair Display', serif;
+    font-size: 46px;
+    font-weight: bold;
+    color: white;
  }
  
- 
+ .jumbotron{
+ background-color: rgb(59, 59, 141);
+ }
  
  .container{
  }
