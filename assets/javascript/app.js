@@ -1,20 +1,17 @@
 
+$("#search").on("click", function(){
 
-////URL query for just key word search
-queryURLSearch = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + input + "&api-key=t4lC5ztOwGuKqRDv8AziAiygSX0OiEtf"
-
-$.ajax ({
-    URL: queryURLSearch,
-    Method: "GET"
-}).then(function(response){
-    console.log(response);
-    console.log(response.runtime)
-});
+  var search = $("#exampleFormControlInput1").val().trim();
+    console.log(search);
+  var  endYear = $("#endyear").val().trim();
+  var startYear = $("#startyear").val().trim();
+   console.log(endYear);
+//URL query if dates entered
+var queryURLSearchDate = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=obama&begin_date=20000101&end_date=20191231&api-key=eV7sVGDBuWfV0mlkOjC4URu45WJVqAbC&q=5";
 
 
 
-////URL query if dates entered
-/*queryURLSearchDate = "https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=" + input + "&facet_field=day_of_week&facet=true&begin_date=" + startYear + "0101&end_date=" + endYear + "0101&api-key=t4lC5ztOwGuKqRDv8AziAiygSX0OiEtf"
+
 
 $.ajax ({
     URL: queryURLSearchDate,
@@ -22,4 +19,7 @@ $.ajax ({
 }).then(function(response){
     console.log(response);
     console.log(response.runtime)
+    
+
+});
 });
